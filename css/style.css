@@ -139,12 +139,23 @@ h3 {
 /* Footer
 -----------------------------*/
 footer {
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 	background: #000;
 	padding: 50px 0px 20px 0px;
 	position: relative;
 }
 
+footer img {
+    width: 100%; 
+    max-width: 142px; 
+}
+
 footer h4 {
+	padding-top: 5px;
+	margin-bottom: 2px;
 	color: #919496;
 	font-size: 0.8em;
 	text-transform: uppercase;
@@ -169,42 +180,64 @@ footer ul li {
 	margin: 0 5px;
 }
 
-
-/* Extra small devices (portrait phones, less than 576px)*/
+/* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
-	.btn-custom {
-		margin: 10px 15px;
-		font-size: 1em;
-	}
+    h1, h2, h3, h4 {
+        font-size: smaller;
+    }
+
+    .btn-custom {
+        margin: 10px 15px;
+        font-size: 0.9em;
+    }
+
+	footer {
+        flex-direction: column;
+        text-align: center;
+    }
+	
+	footer img {
+        display: none;
+    }
+
+	footer img, footer h4 {
+        margin-bottom: 10px;
+    }
 }
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
-	h1 {
-		font-size: 3em;
-	}
-	.btn-custom {
-		margin: 10px 15px;
-	}
+    h1 {
+        font-size: 3em;
+    }
+
+    h2, h3, h4 {
+        font-size: medium;
+    }
+    
+    .btn-custom {
+        margin: 10px 15px;
+        font-size: 1.5em;
+    }
 }
 
-/* Medium devices (tablets, 768px and up)*/
+/* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
-	h1 {
-		font-size: 4em;
-	}
+    h1 {
+        font-size: 4em;
+    }
 }
 
-/* Large devices (desktops, 992px and up)*/
+/* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
-	h1 {
-		font-size: 5em;
-	}
+    h1 {
+        font-size: 5em;
+    }
 }
 
-/* Extra large devices (large desktops, 1200px and up)*/
+/* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-	h1 {
-		font-size: 6em;
-	}
+    h1 {
+        font-size: 6em;
+    }
 }
